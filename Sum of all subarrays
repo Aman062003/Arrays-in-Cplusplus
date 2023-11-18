@@ -1,0 +1,31 @@
+Number of all subarrays will be calculated as n*(n+1)/2.................
+for eg: you have 5 elements of array,
+then num of all subarrays is 5*(5+1)/2 = 15..
+to calculate sum of all subarray we use nested loop first loop for n-1 elements and second loop for n elements
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    cin>>n;
+    
+    int a[n];
+    for(int i=0; i<n; i++){
+        cin>>a[i];
+    }
+    
+    int curr = 0;
+    
+    for(int i=0; i<n; i++){
+        curr = 0;
+        for(int j=i; j<n; j++)
+        {
+            curr += a[j];
+            cout<<curr<<endl;
+        }
+    }
+
+    return 0;
+}
